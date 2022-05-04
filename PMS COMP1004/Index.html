@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Password management system </title>
+    <meta name="Password" content="Password manager"/>
+    <link rel="stylesheet" type="text/css" href="Style.css"/>
+    <!--The link is pulling in the css into the html-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="Code.js"></script>
+    <!--The 2 script lines are linking my javascript file and importing the jquery library-->
+</head>
+
+<body>
+	<ul>
+    <h1> All IN ONE PASSWORD </h1>
+    </ul>
+    <header>
+    <nav> <!--This is the tag that is setting up the navigation bar-->
+        <ul>
+            <li>
+                <a onclick="AccountsFunction()" id="AF">Accounts</a>      
+            </li>
+            <li>
+                <a onclick="ContactUsFunction()" id="CUF">Contact Us</a>   
+            </li>
+            <li>
+                <a class="SignOut" href="Index.html" id="SOF">Sign Out</a>
+            </li>    
+        </ul>
+    </nav>
+    </header>    
+    <div id="AccountDIV">
+        <p class="main">This is the account page. Please select one of the following options.</p> 
+        <ul>
+            <li>
+                <b onclick="GamesFunction()">Click To Display Accounts</b>
+            </li>
+            <li>
+                <b class="main" id="SF" onclick="StrengthFunction()">Click To Display the Strength of the Passwords</b>
+            </li>
+        </ul>
+
+    </div>
+    <div id="ContactDIV">
+        <p class="main">Welcome to the Contact Us page. If there are any questions relating, on how to use the software, login or other inquiries please feel free to contact us via email, phone or coming down to our office.</p>
+        <ul>
+            <li><!--Here i have 2 external links that loads an email or a phone number to get in contact with the web developer -->
+                <p class="main2">Click <a href="mailto:jamesmead222@gmail.com">here</a> to send an email</p>    
+                <p class="main2">Click <a href="tel:+44077372501">here</a> for the phone number</p>        
+                <p class="main2">Our office is located at Drake Circus,PL48AA, Plymouth, Devon, United Kingdom</p>
+            </li>
+        </ul>
+    </div>
+    <div id="GamesDIV"><!--Here is the layout for making the dropdown boxes with all the passwords and usernames-->
+        <div id="flipSteam"></div>
+        <div id="panelSteam"></div>
+        <br>
+        <div id="flipUbisoft"></div>
+        <div id="panelUbisoft"></div>
+        <br>
+        <div id="flipOrigin"></div>
+        <div id="panelOrigin"></div>
+        <br>
+        <div id="flipActivision"></div>
+        <div id="panelActivision"></div>
+        <br>
+        <div id="flipHSBC"></div>
+        <div id="panelHSBC"></div>
+        <br>
+        <div id="flipTW"></div>
+        <div id="panelTW"></div>
+        <br>
+        <div id="flipAmazon"></div>
+        <div id="panelAmazon"></div>
+        <br>
+        <div id="flipYoutube"></div>
+        <div id="panelYoutube"></div>
+        <br>
+        <div id="flipTwitch"></div>
+        <div id="panelTwitch"></div>   
+    </div>
+    
+    <div id="StrengthDIV">
+            <p class="new">Choose an account:</p>
+            <select id="select1"><!--Here im creating options for the dropdown menu-->
+                <option value="SteamPassword">Steam</option>
+                <option value="UbisoftPassword">Ubisoft</option>   
+                <option value="OriginPassword">Origin</option>   
+                <option value="ActivisionPassword">Activision</option>   
+                <option value="HSBCPassword">HSBC</option>   
+                <option value="TWPassword">TransferWise</option>   
+                <option value="AmazonPassword">Amazon</option>   
+                <option value="YoutubePassword">Youtube</option>   
+                <option value="TwitchPassword">Twitch</option>     
+            </select>
+            <br>
+            <button onclick="getOption()">Click to display password strength</button>
+            <br>
+            <span class="output"></span>   
+    </div>
+
+    <!--This is my error text and function call if the login was unsuccessful-->
+    <div class="ERROR"id="ERRORTXT">
+        <p class="ERROR">
+            Password was incorrect. Please reload the page to retry. 
+        </p>
+        <p class="ERROR">Click to refresh page</p>
+        <button class="SignOut"><a href="Index.html">Refresh</a></button>    
+    </div>
+    
+    
+</body>
+</html>
